@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3>Booking Page</h3>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="{{ form.field_name.id_for_label }}">Field Label</label>
+                        {{ form.as_p }}
+                    </div>
+                    <!-- Add more form-group elements for other fields -->
+
+                    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+In this example, replace form.field_name with the actual form fields you have in your BookingForm. The form-group class is used to create the layout structure for form elements, and Bootstrap's utility classes provide additional styling options.
+
+Remember to include the Bootstrap CSS and JavaScript files in your template to ensure the styling is applied correctly.
+
+This approach gives you more control over the exact styling of each form element, but it also requires manual work to ensure consistency and responsiveness. Crispy Forms automates much of this styling process for you, but using Bootstrap classes directly can be a viable alternative if you prefer a more hands-on approach to styling your forms.
+
+
+
+
+

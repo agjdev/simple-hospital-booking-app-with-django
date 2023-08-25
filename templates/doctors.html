@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+
+<div class="container">
+    <div class="row">
+
+
+
+{% for doc in docs %}
+
+<div class="card col-md-4 mt-5 mb-5 mr-5" style="width: 18rem;">
+    <img class="card-img-top" src="{{doc.doc_image.url}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Dr.{{doc.doc_name}}</h5>
+      <p class="card-text">{{doc.dep_spec}}</p>
+      <a href="#" class="btn btn-primary">{{doc.dep_name}}</a>
+    </div>
+  </div>
+
+  {% endfor %}
+
+      
+</div>
+      
+</div>
+
+
+{% endblock %}

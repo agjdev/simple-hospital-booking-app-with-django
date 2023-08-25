@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3> Depart page</h3>
+
+<div class="container">
+    {% for dept in dept %}
+    <div class="col-md-4">
+        <h2>{{dept.dep_name}}</h2>
+        <p>{{dept.dep_description}}</p>
+    </div>
+    {% endfor %}
+</div>
+
+
+
+
+{% endblock %}
